@@ -1,0 +1,46 @@
+
+.cart{
+    background-color: rgba(247, 243, 237, 0.152);
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    box-shadow: 3px 6px 6px   rgba(185, 178, 178, 0.305);   
+}
+
+
+
+.cart-header{
+    width: 40%;
+    margin: auto;
+    color: rgb(130, 26, 26);
+    
+}
+
+
+
+.cart-items{
+  margin-left: 35px;
+}
+.total-oder{
+    font-size: 20px;
+}
+
+.tp-sp{
+    margin-right: 96px;
+}
+.vt-sp{
+    margin-right:99px;
+}
+.sc-sp{
+    margin-right:68px;
+}
+.hrline{
+    width: 80%; 
+}
+.grand-total{
+    color: rgb(203, 26, 26);
+    margin-left: 35px;
+}
+.grand-total-sp{
+    margin-right:60px;
+}

@@ -1,0 +1,21 @@
+.products{
+    display: flex;
+    border-bottom: 1px solid lightblue;
+    margin-right: 8px;
+    padding: 10px;
+}
+.product-details h4{
+    font-weight: 400px;
+    color: rgb(86, 86, 236);
+}
+.product-details{
+    margin-left: 15px;
+}
+.purches-btn{
+    background-color:rgb(223, 175, 54);
+    border: 1px solid rgb(147, 143, 143);
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    cursor: pointer;
+}
