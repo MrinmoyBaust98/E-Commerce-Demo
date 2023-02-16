@@ -11,12 +11,19 @@ const Shop = () => {
     // cart control
     const[cart,setCart]=useState([]);
 
+    // search product display state
+    const[displayProducts,setDisplayProducts]=useState([]);
+
     //for data load
     useEffect(()=>{
         fetch('./products.json')
         .then(res=>res.json())
-        .then(data=>setProducts(data))
-    },[])
+        .then(data=> {
+            setProducts(data);
+            setDisplayProducts(data);
+        });
+        
+    },[]);
 
     // sideEffect for Data Store parmanently
     useEffect(()=>{
@@ -48,11 +55,28 @@ const Shop = () => {
         // Local storage ....data store
         addToDb(product.key);
     }
+    
+    // search bar handle
+    const handleSearchBar=event=>{
+        const searchText=event.target.value;
+        
+        const matchProducts=products.filter(product=>product.name.toLowerCase().includes(searchText.toLowerCase()));
+        setDisplayProducts(matchProducts);
+    }
+
     return (
-        <div className='shop-container'>
+        
+        <div>
+
+            <div className='search-bar'>
+                <input onChange={handleSearchBar} type="text" placeholder='Search Product' />
+
+            </div>
+            <div className='shop-container'>
             <div className="product-container">
                 {
-                    products.map(product=><Products 
+                    // ....> products.map...<(product..... ata general er jonne )...search bar er jonne change hoye displayProduct hobe 
+                        displayProducts.map(product=><Products 
                         key={product.key}
                         product={product}
                         HandleAddToCart={HandleAddToCart}
@@ -64,6 +88,7 @@ const Shop = () => {
 
             </div>
             
+        </div>
         </div>
     );
 };
