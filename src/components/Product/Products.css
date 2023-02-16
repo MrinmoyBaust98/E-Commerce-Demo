@@ -11,6 +11,11 @@
 .product-details{
     margin-left: 15px;
 }
+.rating-style{
+    color: rgb(228, 180, 58);
+    font-size: 17px;
+    margin-bottom: 13px;
+}
 .purches-btn{
     background-color:rgb(223, 175, 54);
     border: 1px solid rgb(147, 143, 143);
@@ -18,4 +23,5 @@
     padding: 5px;
     width: 150px;
     cursor: pointer;
+
 }
