@@ -1,17 +1,30 @@
+
 .nav-control{
-    background-color: rgb(13, 36, 72);
-    padding: 15px;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(10, 10, 61, 0.74);
+    line-height: 30px;
+}
+.nav-control .active{
+    color: rgb(64, 10, 190);
+    font-weight: bold;
+    background-color:rgba(229, 221, 212, 0.697) ;
+    padding: 17px 10px 19px 10px;
+}
+.nav-control li{
+    display: inline-block;
+    padding-right: 50px;
 
 }
-.nav-control a{
+.nav-link{
     text-decoration: none;
+    font-size: 1.3rem;
+    font-weight:500;
     color: white;
-    font-size: 1.5rem;
-    margin-right: 25px;
 }
-.nav-control a:hover{
-    background-color: rgb(192, 168, 137);
-    padding: 15px;
+.nav-control li :hover{
+background-color: rgba(229, 221, 212, 0.697);
+padding: 17px 10px 19px 10px;
+}
 
-}

@@ -1,21 +1,32 @@
-import React from 'react';
-import hederLogo from '../../images/Logo.svg'
-import './Header.css';
+import React from "react";
+
+import "./Header.css";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
-    return (
-        <div>
-            <img src={hederLogo} alt="" />
-            <div>
-            <nav className='nav-control'>
-                <a href="/Shop">Shop</a>
-                <a href="/OderReview"> OderReview</a>
-                <a href="/ManageInvertory"> ManageInventory</a>
-            </nav>
-            </div>
-            
-        </div>
-    );
+  return (
+    <div>
+      <nav className="nav-control">
+        <ul>
+          <li>
+            <NavLink className="nav-link" to="/shop">
+              Shop
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav-link" to="/productReview">
+              OderReview
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav-link" to="/inventory">
+              ManageInventory
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 };
 
 export default Header;
