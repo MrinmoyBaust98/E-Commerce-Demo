@@ -1,0 +1,13 @@
+.remove-btn{
+    background-color:rgb(223, 175, 54);
+    border: 1px solid rgb(147, 143, 143);
+    border-radius: 4px;
+    padding: 5px;
+    width: 110px;
+    cursor: pointer;
+}
+.hr{
+    margin-right: 10px;
+    margin-top: 20px;
+    border-top: 1px solid rgb(157, 186, 243);
+}
