@@ -26,7 +26,9 @@ const ProductReview = () => {
         </div>
 
         <div className="cart-container">
-          <Cart cart={cart}></Cart>
+          <Cart cart={cart}>
+            <button className="remove-btn"> Place oder</button>
+          </Cart>
         </div>
       </div>
     </div>
