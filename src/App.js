@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductReview from "./components/ProductReview/ProductReview";
 import Inventory from "./components/Inventory/Inventory";
 import NotFound from "./components/PageNotFound/NotFound";
+import PlaceOder from "./components/PlaceOder/PlaceOder";
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
             exact
             path="/inventory"
             element={<Inventory></Inventory>}
+          ></Route>
+          <Route
+            exact
+            path="/PlaceOder"
+            element={<PlaceOder></PlaceOder>}
           ></Route>
           <Route exact path="*" element={<NotFound></NotFound>}></Route>
         </Routes>
