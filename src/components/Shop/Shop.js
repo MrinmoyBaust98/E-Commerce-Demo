@@ -49,7 +49,19 @@ const Shop = () => {
     }
   }, [products]);
   const HandleAddToCart = (product) => {
-    const newCart = [...cart, product];
+    // click product card er mordhe ache ki na cheek
+    const exists = cart.find((pd) => pd.key === product.key);
+    let newCart = [];
+    if (exists) {
+      // jodi thake tahole oi product bade baki guloke remaining er mordhe raktechi
+      const remaining = cart.filter((pd) => pd.key !== product.key);
+      //tarpor jeta select kora hoiche tar man 1 baraitechi
+      product.quantity = product.quantity + 1;
+      newCart = [...remaining, product];
+    } else {
+      product.quantity = 1;
+      newCart = [...cart, product];
+    }
     setCart(newCart);
 
     // Local storage ....data store
