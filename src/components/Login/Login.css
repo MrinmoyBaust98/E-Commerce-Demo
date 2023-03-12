@@ -1,0 +1,64 @@
+
+
+
+.login-form{
+    width: 380px;
+    margin: auto; 
+}
+.from-inner{
+    border: 1px solid rgb(165, 170, 165);
+    padding: 10px;
+     padding-left: 30px;
+     margin-top: 10px;
+     font-size: 1.4rem;
+     
+}
+.input-style{
+    width: 300px;
+    line-height: 20px;
+    padding: 5px;
+    margin: 5px 0px;
+}
+.login-btn{
+        width: 310px;
+        background-image: linear-gradient(to right, #D6ADC4, #C2CA5A);
+        border: 2px solid gray;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        padding: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        color: rgb(120, 20, 20);
+        margin-top: 5px;
+
+}
+.register-btn{
+    background-image: linear-gradient(to right, #D6ADC4, #C2CA5A);
+    border: 2px solid gray;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(120, 20, 20);
+    
+    margin-left: 65px;
+
+}
+.outside-from{
+    margin-bottom: 30px;
+    
+}
+.gogle-btn{
+    
+    background-image: linear-gradient(to right, #D6ADC4, #C2CA5A);
+    font-size: 1.2rem;
+    width: 380px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 6px;
+    color: rgb(120, 20, 20);
+    font-weight: bold;
+    cursor: pointer;
+}
+

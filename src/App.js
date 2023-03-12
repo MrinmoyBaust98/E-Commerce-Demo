@@ -6,33 +6,44 @@ import ProductReview from "./components/ProductReview/ProductReview";
 import Inventory from "./components/Inventory/Inventory";
 import NotFound from "./components/PageNotFound/NotFound";
 import PlaceOder from "./components/PlaceOder/PlaceOder";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
+import AuthProvider from "./context/AuthProvider";
 
 function App() {
   return (
     <div>
-      <Router>
-        <Header></Header>
-        <Routes>
-          <Route exact path="/shop" element={<Shop></Shop>}></Route>
-          <Route exact path="/" element={<Shop></Shop>}></Route>
-          <Route
-            exact
-            path="/productReview"
-            element={<ProductReview></ProductReview>}
-          ></Route>
-          <Route
-            exact
-            path="/inventory"
-            element={<Inventory></Inventory>}
-          ></Route>
-          <Route
-            exact
-            path="/PlaceOder"
-            element={<PlaceOder></PlaceOder>}
-          ></Route>
-          <Route exact path="*" element={<NotFound></NotFound>}></Route>
-        </Routes>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Routes>
+            <Route exact path="/shop" element={<Shop></Shop>}></Route>
+            <Route exact path="/" element={<Shop></Shop>}></Route>
+            <Route
+              exact
+              path="/productReview"
+              element={<ProductReview></ProductReview>}
+            ></Route>
+            <Route
+              exact
+              path="/inventory"
+              element={<Inventory></Inventory>}
+            ></Route>
+            <Route
+              exact
+              path="/PlaceOder"
+              element={<PlaceOder></PlaceOder>}
+            ></Route>
+            <Route exact path="/login" element={<Login></Login>}></Route>
+            <Route
+              exact
+              path="/register"
+              element={<Register></Register>}
+            ></Route>
+            <Route exact path="*" element={<NotFound></NotFound>}></Route>
+          </Routes>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
