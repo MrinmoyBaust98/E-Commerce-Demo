@@ -1,0 +1,15 @@
+.shipping-from{
+    width: 350px;
+    margin: auto;
+}
+.shipping-from input{
+    display: block;
+    width: 300px;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.error-co{
+    color: red;
+}

@@ -10,6 +10,7 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import AuthProvider from "./context/AuthProvider";
 import ProtectRouter from "./components/ProtectRouter/ProtectRouter";
+import Shipping from "./components/Shipping/Shipping";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route element={<ProtectRouter />}>
               <Route exact path="/inventory" element={<Inventory />}></Route>
               <Route exact path="/PlaceOder" element={<PlaceOder />}></Route>
+              <Route exact path="/shipping" element={<Shipping />}></Route>
             </Route>
 
             <Route exact path="/login" element={<Login></Login>}></Route>

@@ -19,12 +19,12 @@ const ProductReview = () => {
   };
 
   const handlePlaceOder = () => {
-    navigate("/PlaceOder");
+    navigate("/shipping");
     // Clear UI when PlaceOder Clicked
-    setCart([]);
-    // clear From Local Store also. As when Reload it will completely clear
-    // clearCart import from Fakedb
-    clearTheCart();
+    // setCart([]);
+    // // clear From Local Store also. As when Reload it will completely clear
+    // // clearCart import from Fakedb
+    // clearTheCart();
   };
   return (
     <div>
@@ -42,7 +42,7 @@ const ProductReview = () => {
         <div className="cart-container">
           <Cart cart={cart}>
             <button onClick={handlePlaceOder} className="remove-btn">
-              Place oder
+              Place Oder
             </button>
           </Cart>
         </div>

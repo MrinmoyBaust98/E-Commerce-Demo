@@ -14,7 +14,7 @@ const Login = () => {
   };
 
   // handle previs location after login
-  const redirect_url = location?.state?.from || "/home";
+  const redirect_url = location?.state?.from || "/shop";
 
   // special function for Cheek user login Or Not
   const HandleLogInCheek = () => {
