@@ -9,6 +9,7 @@ import PlaceOder from "./components/PlaceOder/PlaceOder";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import AuthProvider from "./context/AuthProvider";
+import ProtectRouter from "./components/ProtectRouter/ProtectRouter";
 
 function App() {
   return (
@@ -24,16 +25,11 @@ function App() {
               path="/productReview"
               element={<ProductReview></ProductReview>}
             ></Route>
-            <Route
-              exact
-              path="/inventory"
-              element={<Inventory></Inventory>}
-            ></Route>
-            <Route
-              exact
-              path="/PlaceOder"
-              element={<PlaceOder></PlaceOder>}
-            ></Route>
+            <Route element={<ProtectRouter />}>
+              <Route exact path="/inventory" element={<Inventory />}></Route>
+              <Route exact path="/PlaceOder" element={<PlaceOder />}></Route>
+            </Route>
+
             <Route exact path="/login" element={<Login></Login>}></Route>
             <Route
               exact
