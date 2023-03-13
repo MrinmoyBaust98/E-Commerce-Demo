@@ -19,9 +19,7 @@ const useFirebase = () => {
 
   // for sign in
   const signInUsingGoogle = () => {
-    signInWithPopup(auth, googleProvider).then((result) => {
-      console.log(result.user);
-    });
+    return signInWithPopup(auth, googleProvider);
   };
 
   // for log Out
@@ -38,7 +36,7 @@ const useFirebase = () => {
         setUser(user);
       }
     });
-  }, []);
+  }, [auth]);
   return {
     signInUsingGoogle,
     user,

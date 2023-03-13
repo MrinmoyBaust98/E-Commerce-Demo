@@ -1,15 +1,26 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 import "./Login.css";
 
 const Login = () => {
   const { signInUsingGoogle } = useAuth();
-
+  const navigate = useNavigate();
+  const location = useLocation();
   // form reload issue sove function
   const handleSubmit = (event) => {
     event.preventDefault();
+  };
+
+  // handle previs location after login
+  const redirect_url = location?.state?.from || "/home";
+
+  // special function for Cheek user login Or Not
+  const HandleLogInCheek = () => {
+    signInUsingGoogle().then((result) => {
+      navigate(redirect_url);
+    });
   };
 
   return (
@@ -48,7 +59,7 @@ const Login = () => {
         <p style={{ textAlign: "center" }}>
           ------------OR Sign In With------------
         </p>
-        <button onClick={signInUsingGoogle} className="gogle-btn">
+        <button onClick={HandleLogInCheek} className="gogle-btn">
           Google
         </button>
       </div>
